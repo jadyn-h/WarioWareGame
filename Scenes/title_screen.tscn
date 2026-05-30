@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://ckbb2wfqbstkv"]
+
+[ext_resource type="Script" path="res://title_screen.gd" id="1_p3fck"]
+[ext_resource type="Texture2D" uid="uid://dpijjtu5mbem5" path="res://starrybg.jpg" id="2_4gxqj"]
+
+[node name="TitleScreen" type="Node2D" unique_id=1671575479]
+script = ExtResource("1_p3fck")
+
+[node name="Background" type="TextureRect" parent="." unique_id=2138389161]
+offset_right = 4240.0
+offset_bottom = 2384.0
+scale = Vector2(0.27174482, 0.27107367)
+texture = ExtResource("2_4gxqj")
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=409899104]
+clip_contents = false
+offset_left = 114.0
+offset_top = 86.0
+offset_right = 1090.0
+offset_bottom = 436.0
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 108
+text = "Starry Adventures"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=429584970]
+offset_left = 457.0
+offset_top = 283.0
+offset_right = 683.0
+offset_bottom = 541.0
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=1208593597]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 34
+text = "Start Game"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=1881099235]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 34
+text = "Settings"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=407842657]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 34
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
