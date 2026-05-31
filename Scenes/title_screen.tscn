@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ckbb2wfqbstkv"]
 
-[ext_resource type="Script" path="res://title_screen.gd" id="1_p3fck"]
+[ext_resource type="Script" uid="uid://br214gjbfi0cx" path="res://title_screen.gd" id="1_p3fck"]
 [ext_resource type="Texture2D" uid="uid://dpijjtu5mbem5" path="res://starrybg.jpg" id="2_4gxqj"]
 
 [node name="TitleScreen" type="Node2D" unique_id=1671575479]

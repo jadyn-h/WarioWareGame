@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://b0v38b6626573"]
+
+[ext_resource type="Script" uid="uid://bmlq12eg51vyj" path="res://timer_screen.gd" id="1_c7xwe"]
+[ext_resource type="Texture2D" uid="uid://dpijjtu5mbem5" path="res://starrybg.jpg" id="2_2fcgv"]
+[ext_resource type="Texture2D" uid="uid://blo7ja0pc5nh2" path="res://heart2.png" id="3_qnqh0"]
+
+[node name="Level_Scene" type="Node2D" unique_id=604343967]
+script = ExtResource("1_c7xwe")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2115132797]
+offset_right = 4240.0
+offset_bottom = 2384.0
+scale = Vector2(0.27197197, 0.26948124)
+texture = ExtResource("2_2fcgv")
+
+[node name="LivesContainer" type="HBoxContainer" parent="." unique_id=18941566]
+offset_left = 182.00002
+offset_top = 160.00002
+offset_right = 4898.0
+offset_bottom = 998.0
+scale = Vector2(0.16048831, 0.16715077)
+
+[node name="Heart" type="TextureRect" parent="LivesContainer" unique_id=1528054295]
+layout_mode = 2
+texture = ExtResource("3_qnqh0")
+
+[node name="Heart2" type="TextureRect" parent="LivesContainer" unique_id=1140903045]
+layout_mode = 2
+texture = ExtResource("3_qnqh0")
+
+[node name="Heart3" type="TextureRect" parent="LivesContainer" unique_id=1332015247]
+layout_mode = 2
+texture = ExtResource("3_qnqh0")
+
+[node name="Heart4" type="TextureRect" parent="LivesContainer" unique_id=854890225]
+layout_mode = 2
+texture = ExtResource("3_qnqh0")
+
+[node name="Heart5" type="TextureRect" parent="LivesContainer" unique_id=634983189]
+layout_mode = 2
+texture = ExtResource("3_qnqh0")
+
+[node name="Level" type="RichTextLabel" parent="." unique_id=217379366]
+offset_left = 432.0
+offset_top = 325.0
+offset_right = 724.0
+offset_bottom = 419.0
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/normal_font_size = 42
+text = "Level #"
+horizontal_alignment = 1
+
+[node name="Timer" type="RichTextLabel" parent="." unique_id=69031056]
+offset_left = 526.0
+offset_top = 409.0
+offset_right = 626.0
+offset_bottom = 469.0
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/normal_font_size = 42
+text = "0.0"
+horizontal_alignment = 1

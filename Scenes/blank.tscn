@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cv7ltaawg8n3p"]
+
+[ext_resource type="Texture2D" uid="uid://dpijjtu5mbem5" path="res://starrybg.jpg" id="1_pvq5a"]
+
+[node name="blank" type="Node2D" unique_id=1503454506]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1299447011]
+offset_right = 4240.0
+offset_bottom = 2384.0
+scale = Vector2(0.27202642, 0.2723351)
+texture = ExtResource("1_pvq5a")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=357659438]
+offset_left = 127.0
+offset_top = -33.0
+offset_right = 1106.0
+offset_bottom = 578.0
+theme_override_font_sizes/normal_font_size = 250
+text = "BLANK SCREEN"
