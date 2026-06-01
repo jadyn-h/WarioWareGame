@@ -1,3 +1,34 @@
 [gd_scene format=3 uid="uid://d1tk3xi631jt3"]
 
+[ext_resource type="Texture2D" uid="uid://yb3c1pntje1f" path="res://purple_bg.png" id="1_enoba"]
+[ext_resource type="PackedScene" uid="uid://x37ogllew5qs" path="res://Scenes/player.tscn" id="2_11mgy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_11mgy"]
+size = Vector2(40, 40)
+
 [node name="minigame_1" type="Node2D" unique_id=2063248328]
+position = Vector2(1.0000305, 604)
+scale = Vector2(28.763334, 1.0864882)
+
+[node name="Background" type="TextureRect" parent="." unique_id=370773156]
+offset_top = -557.7603
+offset_right = 1000.0
+offset_bottom = 271.2397
+scale = Vector2(0.039999355, 0.7203366)
+texture = ExtResource("1_enoba")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=510328575]
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=1652606484]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.8492706, 0.70105326, 0.1947858, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1147577916]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_11mgy")
+
+[node name="Player" parent="." unique_id=76858177 instance=ExtResource("2_11mgy")]
+position = Vector2(-23.363077, -763.0087)
+scale = Vector2(0.051494703, 1.3215199)
