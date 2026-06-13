@@ -41,9 +41,9 @@ layout_mode = 2
 texture = ExtResource("3_qnqh0")
 
 [node name="Level" type="RichTextLabel" parent="." unique_id=217379366]
-offset_left = 413.0
+offset_left = 432.0
 offset_top = 325.0
-offset_right = 705.0
+offset_right = 724.0
 offset_bottom = 419.0
 theme_override_constants/outline_size = 20
 theme_override_font_sizes/normal_font_size = 42
@@ -51,10 +51,10 @@ text = "Level #"
 horizontal_alignment = 1
 
 [node name="Timer" type="RichTextLabel" parent="." unique_id=69031056]
-offset_left = 514.0
-offset_top = 413.0
-offset_right = 614.0
-offset_bottom = 473.0
+offset_left = 526.0
+offset_top = 409.0
+offset_right = 626.0
+offset_bottom = 469.0
 theme_override_constants/outline_size = 20
 theme_override_font_sizes/normal_font_size = 42
 text = "0.0"
