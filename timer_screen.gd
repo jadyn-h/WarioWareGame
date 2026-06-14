@@ -41,7 +41,7 @@ func _process(delta: float) -> void:
 			lives_container.hide()
 			
 	timer.text = str(time)
-	level.text = "Level" + str(Global.minigames_done)
+	level.text = "Level " + str(Global.minigames_done)
 	
 func Timer(start_time: float):
 	
