@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://d1tk3xi631jt3"]
 
+[ext_resource type="Script" uid="uid://bmryqdroeoiji" path="res://Scenes/minigame_1.gd" id="1_5txvl"]
 [ext_resource type="Texture2D" uid="uid://yb3c1pntje1f" path="res://purple_bg.png" id="1_enoba"]
 [ext_resource type="PackedScene" uid="uid://x37ogllew5qs" path="res://Scenes/player.tscn" id="2_11mgy"]
 [ext_resource type="Texture2D" uid="uid://bjvbq3s51kbsp" path="res://cheese.png" id="3_f6tb2"]
+[ext_resource type="Script" uid="uid://ccqflni3lrju4" path="res://Scenes/cheese.gd" id="4_0uv5o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_11mgy"]
 size = Vector2(40, 40)
@@ -15,7 +17,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Node2D:position")
+tracks/0/path = NodePath("Cheese:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -31,7 +33,7 @@ loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Node2D:position")
+tracks/0/path = NodePath("Cheese:position")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -47,9 +49,13 @@ _data = {
 &"floating": SubResource("Animation_o6yob")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_f6tb2"]
+radius = 5.0719104
+
 [node name="minigame_1" type="Node2D" unique_id=2063248328]
 position = Vector2(1.0000305, 604)
 scale = Vector2(28.763334, 1.0864882)
+script = ExtResource("1_5txvl")
 
 [node name="Background" type="TextureRect" parent="." unique_id=370773156]
 offset_top = -557.7603
@@ -71,7 +77,7 @@ position = Vector2(20, 19.999939)
 shape = SubResource("RectangleShape2D_11mgy")
 
 [node name="Player" parent="." unique_id=76858177 instance=ExtResource("2_11mgy")]
-position = Vector2(-25.657661, -744.6007)
+position = Vector2(-25.205702, -747.36194)
 scale = Vector2(0.051494703, 1.3215199)
 
 [node name="Platform2" type="StaticBody2D" parent="." unique_id=19399911]
@@ -103,19 +109,20 @@ shape = SubResource("RectangleShape2D_f6tb2")
 [node name="Platform4" type="StaticBody2D" parent="." unique_id=285500489]
 
 [node name="ColorRect" type="ColorRect" parent="Platform4" unique_id=1026805281]
-offset_left = 25.622898
-offset_top = -192.36288
-offset_right = 38.34743
-offset_bottom = -169.35297
+offset_left = 27.048325
+offset_top = -203.40764
+offset_right = 39.772858
+offset_bottom = -180.39772
 color = Color(0, 0, 0.3019608, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4" unique_id=1801012728]
-position = Vector2(32.402363, -180.39772)
+position = Vector2(33.410587, -190.52208)
 shape = SubResource("RectangleShape2D_f6tb2")
 
-[node name="Node2D" type="Node2D" parent="." unique_id=342144442]
+[node name="Cheese" type="Node2D" parent="." unique_id=342144442]
+script = ExtResource("4_0uv5o")
 
-[node name="Cheese" type="TextureRect" parent="Node2D" unique_id=581811160]
+[node name="Cheese" type="TextureRect" parent="Cheese" unique_id=581811160]
 offset_left = 8.58732
 offset_top = -139.90027
 offset_right = 853.58734
@@ -123,6 +130,58 @@ offset_bottom = 491.09973
 scale = Vector2(0.0032045909, 0.080257624)
 texture = ExtResource("3_f6tb2")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D" unique_id=54946517]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Cheese" unique_id=54946517]
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_5txvl")
+
+[node name="Area2D" type="Area2D" parent="Cheese" unique_id=175311780]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cheese/Area2D" unique_id=1651116584]
+position = Vector2(10.290878, -116.89036)
+scale = Vector2(0.3030115, 7.5483494)
+shape = SubResource("CircleShape2D_f6tb2")
+
+[node name="Cheese3" type="Node2D" parent="." unique_id=606490878]
+
+[node name="Cheese" type="TextureRect" parent="Cheese3" unique_id=1078960997]
+offset_left = 37.06107
+offset_top = -336.8651
+offset_right = 882.0611
+offset_bottom = 294.1349
+scale = Vector2(0.0032045909, 0.080257624)
+texture = ExtResource("3_f6tb2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Cheese3" unique_id=2046555010]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_5txvl")
+
+[node name="Area2D" type="Area2D" parent="Cheese3" unique_id=501628924]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cheese3/Area2D" unique_id=1287866851]
+position = Vector2(38.208366, -311.09402)
+scale = Vector2(0.3030115, 7.5483494)
+shape = SubResource("CircleShape2D_f6tb2")
+
+[node name="Cheese2" type="Node2D" parent="." unique_id=169722334]
+position = Vector2(11.16004, -112.288376)
+
+[node name="Cheese" type="TextureRect" parent="Cheese2" unique_id=474083978]
+offset_left = 8.69162
+offset_top = -121.49234
+offset_right = 853.69165
+offset_bottom = 509.50766
+scale = Vector2(0.0032045909, 0.080257624)
+texture = ExtResource("3_f6tb2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Cheese2" unique_id=2130300900]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_5txvl")
+
+[node name="Area2D" type="Area2D" parent="Cheese2" unique_id=1558992505]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cheese2/Area2D" unique_id=1870914396]
+position = Vector2(10.290878, -93.88045)
+scale = Vector2(0.3030115, 7.5483494)
+shape = SubResource("CircleShape2D_f6tb2")
+
+[connection signal="cheese_collected" from="Cheese" to="." method="_on_cheese_collection"]
