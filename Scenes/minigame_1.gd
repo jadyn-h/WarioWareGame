@@ -1,5 +1,6 @@
 extends Node2D
 @onready var themed_timer: Node2D = $ThemedTimer
+
 #BUGGG got to figure this out hmm
 
 
@@ -31,3 +32,11 @@ func _process(delta: float) -> void:
 func _on_cheese_collection() -> void:
 	cheese_collected = cheese_collected +1
 	return
+
+
+func _on_cheese_3_cheese_collected() -> void:
+	cheese_collected = cheese_collected + 1
+	return
+
+func _on_cheese_2_cheese_collected() -> void:
+	cheese_collected = cheese_collected + 1

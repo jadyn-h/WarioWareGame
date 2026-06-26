@@ -1,7 +1,8 @@
 extends Node2D
-@onready var player: CharacterBody2D = $"../Player"
+@onready var player: CharacterBody2D = $"../Player" 
 @onready var self_area = $Area2D
 @onready var player_area = $"../Player/Area2D"
+
 
 signal cheese_collected 
 

@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://x37ogllew5qs" path="res://Scenes/player.tscn" id="2_11mgy"]
 [ext_resource type="Texture2D" uid="uid://bjvbq3s51kbsp" path="res://cheese.png" id="3_f6tb2"]
 [ext_resource type="Script" uid="uid://ccqflni3lrju4" path="res://Scenes/cheese.gd" id="4_0uv5o"]
+[ext_resource type="PackedScene" uid="uid://bunjfwkidt6cl" path="res://Scenes/themed_timer.tscn" id="6_0uv5o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_11mgy"]
 size = Vector2(40, 40)
@@ -142,6 +143,7 @@ scale = Vector2(0.3030115, 7.5483494)
 shape = SubResource("CircleShape2D_f6tb2")
 
 [node name="Cheese3" type="Node2D" parent="." unique_id=606490878]
+script = ExtResource("4_0uv5o")
 
 [node name="Cheese" type="TextureRect" parent="Cheese3" unique_id=1078960997]
 offset_left = 37.06107
@@ -164,6 +166,7 @@ shape = SubResource("CircleShape2D_f6tb2")
 
 [node name="Cheese2" type="Node2D" parent="." unique_id=169722334]
 position = Vector2(11.16004, -112.288376)
+script = ExtResource("4_0uv5o")
 
 [node name="Cheese" type="TextureRect" parent="Cheese2" unique_id=474083978]
 offset_left = 8.69162
@@ -184,4 +187,9 @@ position = Vector2(10.290878, -93.88045)
 scale = Vector2(0.3030115, 7.5483494)
 shape = SubResource("CircleShape2D_f6tb2")
 
+[node name="ThemedTimer" parent="." unique_id=1551454488 instance=ExtResource("6_0uv5o")]
+position = Vector2(11.751071, -287.16373)
+
 [connection signal="cheese_collected" from="Cheese" to="." method="_on_cheese_collection"]
+[connection signal="cheese_collected" from="Cheese3" to="." method="_on_cheese_3_cheese_collected"]
+[connection signal="cheese_collected" from="Cheese2" to="." method="_on_cheese_2_cheese_collected"]

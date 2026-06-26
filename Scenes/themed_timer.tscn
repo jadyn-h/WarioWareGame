@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bunjfwkidt6cl"]
 
-[ext_resource type="Script" uid="uid://7sae2vwcyx31" path="res://themed_timer.gd" id="1_jnd3y"]
+[ext_resource type="Script" uid="uid://7sae2vwcyx31" path="res://Scenes/themed_timer.gd" id="1_jnd3y"]
 
 [node name="ThemedTimer" type="Node2D" unique_id=1551454488]
 script = ExtResource("1_jnd3y")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1741060011]
+[node name="timer" type="RichTextLabel" parent="." unique_id=1741060011]
 offset_right = 40.0
 offset_bottom = 40.0
