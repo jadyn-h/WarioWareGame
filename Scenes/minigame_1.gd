@@ -1,7 +1,6 @@
 extends Node2D
 @onready var themed_timer: Node2D = $ThemedTimer
 
-#BUGGG got to figure this out hmm
 
 
 var cheese_collected = 0
