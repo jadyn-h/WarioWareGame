@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://b3tt1b1pd1t50"]
+
+[ext_resource type="Script" uid="uid://cl4o4fybji5qy" path="res://Scenes/minigame_2.gd" id="1_rfxq2"]
+[ext_resource type="Texture2D" uid="uid://yb3c1pntje1f" path="res://purple_bg.png" id="2_mmgun"]
+[ext_resource type="Texture2D" uid="uid://bjvbq3s51kbsp" path="res://cheese.png" id="3_h684j"]
+[ext_resource type="Script" uid="uid://cmertw1202jfg" path="res://button_1.gd" id="4_wu6l1"]
+[ext_resource type="PackedScene" uid="uid://bunjfwkidt6cl" path="res://Scenes/themed_timer.tscn" id="5_cqly6"]
+
+[node name="minigame_2" type="Node2D" unique_id=1754148637]
+script = ExtResource("1_rfxq2")
+
+[node name="Background" type="TextureRect" parent="." unique_id=638685135]
+offset_top = -5.000004
+offset_right = 28800.465
+offset_bottom = 902.909
+scale = Vector2(0.039999355, 0.7203366)
+texture = ExtResource("2_mmgun")
+
+[node name="Button1" type="TextureButton" parent="." unique_id=335057030]
+offset_left = 64.0
+offset_top = 75.0
+offset_right = 909.0
+offset_bottom = 706.0
+scale = Vector2(0.21625705, 0.20284528)
+texture_normal = ExtResource("3_h684j")
+script = ExtResource("4_wu6l1")
+
+[node name="Button2" type="TextureButton" parent="." unique_id=992578812]
+offset_left = 223.00002
+offset_top = 404.99997
+offset_right = 1068.0
+offset_bottom = 1036.0
+scale = Vector2(0.21625705, 0.20284528)
+texture_normal = ExtResource("3_h684j")
+script = ExtResource("4_wu6l1")
+
+[node name="Button3" type="TextureButton" parent="." unique_id=697080876]
+offset_left = 701.0
+offset_top = 212.0
+offset_right = 1546.0
+offset_bottom = 843.0
+scale = Vector2(0.21625705, 0.20284528)
+texture_normal = ExtResource("3_h684j")
+script = ExtResource("4_wu6l1")
+
+[node name="Button4" type="TextureButton" parent="." unique_id=1168245124]
+offset_left = 938.00006
+offset_top = 499.00003
+offset_right = 1783.0
+offset_bottom = 1130.0
+scale = Vector2(0.21625705, 0.20284528)
+texture_normal = ExtResource("3_h684j")
+script = ExtResource("4_wu6l1")
+
+[node name="ThemedTimer" parent="." unique_id=1551454488 instance=ExtResource("5_cqly6")]
+position = Vector2(444, 168)
+
+[connection signal="pressed" from="Button1" to="Button1" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
+[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]
+[connection signal="pressed" from="Button4" to="Button4" method="_on_pressed"]
